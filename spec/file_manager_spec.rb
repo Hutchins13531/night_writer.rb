@@ -11,6 +11,11 @@ RSpec.describe FileManager do
   expect(file_manager.read_file).to eq(nil)
   end
 
+  it 'can read a file' do
+    file_manager = FileManager.new
+  expect(file_manager.read).to eq("hello world")
+
+
 
 
 
