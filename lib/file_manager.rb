@@ -9,4 +9,9 @@ class FileManager
     @read_file = File.read(file).chomp
   end
 
+  def write(file)
+    new_file = File.new(file, "w")
+    new_file.close
+  end
+
 end

@@ -20,7 +20,7 @@ RSpec.describe FileManager do
     file_manager = FileManager.new
     filemanager = FileManager.new
     filemanager.read("message.txt").chomp
-    filemanager.write_braille("braille_txt_manager_test.txt")
-expect(file_manager.write).to eq()
+    expect(file_manager.write("braille.txt")).to eq("hello")
+  end
 
 end
