@@ -1,6 +1,5 @@
 require './lib/file_manager'
 
-class NightWriter 
+class NightWriter
   argv = ARGV
-
 end
