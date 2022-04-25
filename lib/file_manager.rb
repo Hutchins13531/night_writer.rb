@@ -11,6 +11,7 @@ class FileManager
 
   def write(file)
     new_file = File.new(file, "w")
+    new_file.puts(@read_file)
     new_file.close
   end
 

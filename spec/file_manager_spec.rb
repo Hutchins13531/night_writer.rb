@@ -13,14 +13,15 @@ RSpec.describe FileManager do
 
   it 'can read a file' do
     file_manager = FileManager.new
-  expect(file_manager.read("test_message.txt")).to eq("hello")
+    file_manager.read("message.txt")
+  expect(file_manager.read_file).to eq("hello")
   end
 
   it 'can write to a braille file' do
     file_manager = FileManager.new
-    filemanager = FileManager.new
-    filemanager.read("message.txt").chomp
-    expect(file_manager.write("braille.txt")).to eq("hello")
+    file_manager.read("message.txt")
+    file_manager.write("braille.txt")
+    expect(file_manager.read_file).to eq("hello")
   end
 
 end
