@@ -13,6 +13,7 @@ RSpec.describe TranslateBraille do
     file_manager = FileManager.new
     translator1 = TranslateBraille.new(file_manager)
   expect(translator1.file_manager).to eq(file_manager)
+  expect(translator1.translated_message).to eq([])
   end
 
 
