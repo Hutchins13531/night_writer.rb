@@ -33,5 +33,18 @@ class TranslateBraille
     braille3
   end
 
-
+  def limit_to_80_chars
+    top    = top_line
+    middle = middle_line
+    bottom = bottom_line
+    until top.length == 0
+      @translated_message << top.slice!(0..39)
+      @translated_message << "\n"
+      @translated_message << middle.slice!(0..39)
+      @translated_message << "\n"
+      @translated_message << bottom.slice!(0..39)
+      @translated_message << "\n"
+    end
+    @translated_message.join
+  end
 end
