@@ -8,7 +8,7 @@ class NightReader
   if argv.length == 2
     file = FileManager.new
       file.read(argv[0])
-      file.write_braille(argv[1])
+      file.write_english(argv[1])
       outgoing_message_length = File.read(argv[1]).chomp.length
       confirmation_message2(argv[1], outgoing_message_length)
   end

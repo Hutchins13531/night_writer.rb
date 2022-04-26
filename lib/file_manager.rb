@@ -7,6 +7,7 @@ class FileManager
   def initialize
     @read_file = nil
     @translator1 = TranslateBraille.new(self)
+    @translator2 = TranslateEnglish.new(self)
   end
 
   def read(file)
