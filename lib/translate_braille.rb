@@ -25,5 +25,13 @@ class TranslateBraille
     braille2
   end
 
+  def bottom_line
+    braille3 = []
+    @file_manager.read_file.each_char do |character|
+    braille3 << dictionary.letters[character][2]
+    end
+    braille3
+  end
+
 
 end

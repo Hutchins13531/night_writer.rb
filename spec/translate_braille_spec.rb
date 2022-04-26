@@ -39,7 +39,7 @@ RSpec.describe TranslateBraille do
     translator1 = TranslateBraille.new(file_manager)
     dictionary = Dictionary.new
     file_manager.read("test.txt")
-  expect(translator1.middle_line).to eq(["00"])
+  expect(translator1.bottom_line).to eq([".."])
   end
 
 
