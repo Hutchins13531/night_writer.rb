@@ -26,8 +26,12 @@ class TranslateEnglish
     end
     elements_array
   end
-  
 
-
-
+  def translate_letter
+  letters_array = []
+    make_keys.each do |key|
+      letters_array << @dictionary.braille[key]
+    end
+    @translated_message = letters_array.join
+  end
 end
