@@ -42,6 +42,13 @@ RSpec.describe TranslateBraille do
   expect(translator1.bottom_line).to eq([".."])
   end
 
+  it 'has a maximum limit of 80 characters' do
+    file_manager = FileManager.new
+    translator1 = TranslateBraille.new(file_manager)
+    file_manager.read("test2.txt")
+    expect(translator1.limit_to_80_chars).to be_a(Array)
+  end
+
 
 
 
