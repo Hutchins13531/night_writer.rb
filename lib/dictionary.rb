@@ -31,5 +31,6 @@ class Dictionary
       "z" => ["0.", ".0", "00"],
       " " => ["..", "..", ".."]
     }
+     @braille = @letters.invert
   end
 end
