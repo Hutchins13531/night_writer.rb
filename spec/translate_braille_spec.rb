@@ -50,13 +50,4 @@ RSpec.describe TranslateBraille do
     translator1.limit_to_80_chars
     expect(translator1.translated_message).to be_an_instance_of(Array)
   end
-
-
-
-
-
-
-
-
-
 end
