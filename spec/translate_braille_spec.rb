@@ -12,9 +12,13 @@ RSpec.describe TranslateBraille do
   it 'has readable attributes' do
     file_manager = FileManager.new
     translator1 = TranslateBraille.new(file_manager)
+    dictionary = Dictionary.new
   expect(translator1.file_manager).to eq(file_manager)
   expect(translator1.translated_message).to eq([])
+  expect(translator1.dictionary).to be_an_instance_of(Dictionary)
   end
+
+
 
 
 
