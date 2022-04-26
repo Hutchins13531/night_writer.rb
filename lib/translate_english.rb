@@ -9,4 +9,13 @@ class TranslateEnglish
     @translated_message = Array.new
   end
 
+  def format_to_elements
+    elements_array = []
+    separate = @file_manager.read_file.downcase.split("\n")
+    until separate[0].length == 0
+      elements_array.push(separate[0].slice!(0..1), separate[1].slice!(0..1), separate[2].slice!(0..1))
+    end
+    elements_array
+  end
+
 end
