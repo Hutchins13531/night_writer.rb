@@ -10,5 +10,4 @@ class TranslateBraille
   end
 
 
-
 end
