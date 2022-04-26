@@ -36,7 +36,11 @@ RSpec.describe TranslateEnglish do
   expect(translator2.make_keys).to eq(expected)
   end
 
-
-
-
+  it 'has letter values associated with braille keys' do
+    file_manager = FileManager.new
+    translator2 = TranslateEnglish.new(file_manager)
+    dictionary = Dictionary.new
+    file_manager.read("test_braille_char.txt")
+  expect(translator2.translate_letter).to eq('ts')
+  end
 end
