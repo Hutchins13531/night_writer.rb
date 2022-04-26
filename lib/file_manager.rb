@@ -1,5 +1,7 @@
+require './lib/translate_braille'
+
 class FileManager
-  attr_reader :read_file
+  attr_reader :read_file, :translator1
 
   def initialize
     @read_file = nil
