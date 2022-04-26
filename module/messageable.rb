@@ -1,6 +1,6 @@
-module Messagble
+module Messageable
 
-  def confirmation_message(argv[1], outgoing_message_length)
-     puts "Created '#{argv[1]}' containing #{outgoing_message_length} characters."
+  def confirmation_message(outgoing_message, char_length)
+     puts "Created '#{outgoing_message}' containing #{char_length} characters."
   end
 end
