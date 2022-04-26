@@ -6,5 +6,9 @@ RSpec.describe Dictionary do
   expect(dictionary).to be_an_instance_of(Dictionary)
   end
 
+  it 'has readable attributes' do
+    dictionary = Dictionary.new
+  expect(dictionary.letters).to be_a(Hash)
+  end
 
 end
