@@ -17,4 +17,5 @@ class FileManager
     new_file.puts(@translator1.limit_to_80_chars)
     new_file.close
   end
+
 end

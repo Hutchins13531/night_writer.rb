@@ -1,5 +1,5 @@
 class Dictionary
-  attr_reader :letters
+  attr_reader :letters, :braille
 
   def initialize
     @letters = {
@@ -31,5 +31,6 @@ class Dictionary
       "z" => ["0.", ".0", "00"],
       " " => ["..", "..", ".."]
     }
+     @braille = @letters.invert
   end
 end
