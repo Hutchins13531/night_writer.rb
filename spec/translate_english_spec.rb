@@ -18,7 +18,7 @@ RSpec.describe TranslateEnglish do
   expect(translator2.dictionary).to be_an_instance_of(Dictionary)
   end
 
-  it 'can convert joined elements back to individual elements in an array' do
+  it 'can convert joined elements into individual elements of an array' do
     file_manager = FileManager.new
     translator2 = TranslateEnglish.new(file_manager)
     dictionary = Dictionary.new
@@ -26,6 +26,16 @@ RSpec.describe TranslateEnglish do
     expected = [".0", "00", "0.", ".0", "0.", "0."]
   expect(translator2.format_to_elements).to eq(expected)
   end
+
+  it 'can convert array elements into hash keys' do
+    file_manager = FileManager.new
+    translator2 = TranslateEnglish.new(file_manager)
+    dictionary = Dictionary.new
+    file_manager.read("test_braille_char.txt")
+    expected = [[".0", "00", "0."], [".0", "0.", "0."]]
+  expect(translator2.makey_keys).to eq(expected)
+  end
+
 
 
 
