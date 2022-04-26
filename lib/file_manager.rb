@@ -1,4 +1,5 @@
 require './lib/translate_braille'
+require './lib/translate_english'
 
 class FileManager
   attr_reader :read_file, :translator1
@@ -15,6 +16,12 @@ class FileManager
   def write_braille(file)
     new_file = File.new(file, "w")
     new_file.puts(@translator1.limit_to_80_chars)
+    new_file.close
+  end
+
+  def write_english(file)
+    new_file = File.new(file, "w")
+    new_file.puts(@translator2.translate_letter)
     new_file.close
   end
 

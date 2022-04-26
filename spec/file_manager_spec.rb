@@ -17,7 +17,7 @@ RSpec.describe FileManager do
   expect(file_manager.read_file).to eq("hello")
   end
 
-  it 'can write braille to a braille file' do
+  it 'can write to a file in braille' do
     file_manager = FileManager.new
     file_manager.read("message.txt")
     file_manager.write_braille("braille.txt")
@@ -26,4 +26,10 @@ RSpec.describe FileManager do
               )
   end
 
+  it 'can write to a file in english' do
+    file_manager = FileManager.new
+    file_manager.read("braille.txt")
+    file_manager.write_english("original_message.txt")
+    expect(file_manager.read("original_message.txt")).to eq("hello")
+  end
 end
