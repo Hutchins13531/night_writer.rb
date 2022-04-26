@@ -46,7 +46,8 @@ RSpec.describe TranslateBraille do
     file_manager = FileManager.new
     translator1 = TranslateBraille.new(file_manager)
     file_manager.read("test2.txt")
-    expect(translator1.limit_to_80_chars).to be_a(Array)
+    translator1.limit_to_80_chars
+    expect(translator1.translated_message).to be_an_instance_of(Array)
   end
 
 
