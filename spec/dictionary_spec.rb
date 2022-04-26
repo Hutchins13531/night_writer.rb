@@ -10,5 +10,4 @@ RSpec.describe Dictionary do
     dictionary = Dictionary.new
   expect(dictionary.letters).to be_a(Hash)
   end
-
 end
