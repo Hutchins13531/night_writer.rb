@@ -18,4 +18,13 @@ class TranslateEnglish
     elements_array
   end
 
+  def make_keys
+    keys = format_to_elements
+    elements_array = []
+    until keys.length == 0
+      elements_array << keys.slice!(0..2)
+    end
+    elements_array
+  end
+
 end

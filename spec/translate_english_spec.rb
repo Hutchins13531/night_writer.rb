@@ -33,7 +33,7 @@ RSpec.describe TranslateEnglish do
     dictionary = Dictionary.new
     file_manager.read("test_braille_char.txt")
     expected = [[".0", "00", "0."], [".0", "0.", "0."]]
-  expect(translator2.makey_keys).to eq(expected)
+  expect(translator2.make_keys).to eq(expected)
   end
 
 
