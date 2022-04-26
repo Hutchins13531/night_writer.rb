@@ -9,5 +9,13 @@ class TranslateBraille
     @translated_message = Array.new
   end
 
+  def top_line
+    braille1 = []
+    @file_manager.read_file.each_char do |character|
+    braille1 << dictionary.letters[character][0]
+    end
+    braille1
+  end
+
 
 end
