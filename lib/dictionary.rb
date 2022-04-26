@@ -1,5 +1,5 @@
 class Dictionary
-  attr_reader :letters
+  attr_reader :letters, :braille
 
   def initialize
     @letters = {
