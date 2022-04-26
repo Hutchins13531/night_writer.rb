@@ -34,6 +34,8 @@ RSpec.describe TranslateBraille do
   expect(translator1.middle_line).to eq(["00"])
   end
 
+  
+
 
 
 
