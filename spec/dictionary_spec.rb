@@ -15,5 +15,4 @@ RSpec.describe Dictionary do
     dictionary = Dictionary.new
   expect(dictionary.letters["m"]).to eq(["00", "..", "0."])
   end
-
 end

@@ -1,7 +1,7 @@
 require './lib/file_manager'
 require './module/Messageable'
 
-class NightWriter
+class NightReader
   extend Messageable
 
   argv = ARGV
@@ -10,8 +10,8 @@ class NightWriter
       file.read(argv[0])
       file.write_braille(argv[1])
       outgoing_message_length = File.read(argv[1]).chomp.length
-      confirmation_message1(argv[1], outgoing_message_length)
+      confirmation_message2(argv[1], outgoing_message_length)
   end
 end
 
-# ruby ./lib/night_writer.rb message.txt braille.txt
+# ruby ./lib/night_reader.rb braille.txt original_message.txt
