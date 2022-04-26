@@ -10,4 +10,10 @@ RSpec.describe Dictionary do
     dictionary = Dictionary.new
   expect(dictionary.letters).to be_a(Hash)
   end
+
+  it 'has braille equivalent of letters' do
+    dictionary = Dictionary.new
+  expect(dictionary.letters["m"]).to eq(["00", "..", "0."])
+  end
+
 end
